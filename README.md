@@ -4,7 +4,7 @@ This hook can be used to load the Google Maps API script as a hook. It is heavil
 
 ```tsx
 import { ReactNode } from 'react';
-import { useGoogleMapsScript } from 'use-google-maps-script';
+import { useGoogleMapsScript, Libraries } from 'use-google-maps-script';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ interface LoadScriptProps {
 }
 
 // Important to either declare outside component or memoize to avoid re-renders
-const libraries = ['places'];
+const libraries: Libraries = ['places'];
 
 function LoadScript({ googleMapsApiKey, children }: LoadScriptProps) {
   const { isLoaded, loadError } = useLoadScript({
