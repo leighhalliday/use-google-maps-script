@@ -6,7 +6,7 @@ This hook can be used to load the Google Maps API script as a hook. It is heavil
 import { ReactNode } from 'react';
 import { useGoogleMapsScript, Libraries } from 'use-google-maps-script';
 
-function App() {
+export function App() {
   return (
     <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}>
       <SearchBox />
