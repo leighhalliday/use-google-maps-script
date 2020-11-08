@@ -28,8 +28,8 @@ function LoadScript({ googleMapsApiKey, children }: LoadScriptProps) {
     libraries,
   });
 
-  if (!isLoaded) return null;
-  if (loadError) return <div>Error loading</div>;
+  if (!isLoaded) return <div>Loading script</div>;
+  if (loadError) return <div>Error loading script</div>;
   return children;
 }
 
